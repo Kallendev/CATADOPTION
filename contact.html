@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Animal Adoption</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <div class="logo">Animal Adoption</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Get In Touch</h1>
+    <p>We’d love to hear from you! 🐾</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <form action="https://formspree.io/f/xeogperv" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Animal Adoption. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const contactForm = document.querySelector('#contact form');
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // prevent page reload
+        Swal.fire({
+          title: 'Message Sent!',
+          text: 'Thank you for reaching out. We will get back to you soon.',
+          icon: 'success',
+          confirmButtonColor: 'green'
+        }).then(() => {
+          contactForm.submit(); // Submit to Formspree after alert
+          form.style.display = "none";
+
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

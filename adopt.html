@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt a Pet - Animal Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <header>
+  <div class="logo">Animal Adoption</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="adopt.html"class="active">Adopt</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+   <section class="cards">
+  <div class="card">
+    <img src="images/cute cat 4.png" alt="Cute Cat 1">
+    <h3>Milo</h3>
+    <p>Playful and loving</p>
+    <button class="btn">Adopt Me</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cute cat1.png" alt="Cute Cat 2">
+    <h3>Luna</h3>
+    <p>Gentle and cuddly</p>
+    <button class="btn">Adopt Me</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cute cat2.png" alt="Cute Cat 3">
+    <h3>Oreo</h3>
+    <p>Mischievous fluffball</p>
+    <button class="btn">Adopt Me</button>
+  </div>
+
+  <div class="card">
+    <img src="images/cute cat 3.png" alt="Cute Cat 4">
+    <h3>Nala</h3>
+    <p>Queen of naps</p>
+    <button class="btn">Adopt Me</button>
+  </div>
+  <div class="card">
+      <img src="images/cute cat 5.png" alt="Cute Cat 5">
+      <h3>Simba</h3>
+      <p>Adventurous spirit</p>
+      <button class="btn">Adopt Me</button>
+    </div>
+
+    <div class="card">
+      <img src="images/cute cat 6.png" alt="Cute Cat 6">
+      <h3>Willow</h3>
+      <p>Quiet and affectionate</p>
+      <button class="btn">Adopt Me</button>
+    </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Animal Haven. All rights reserved.</p>
+  </footer>
+
+  <script>
+  // Contact Form Submission
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop actual submission
+      Swal.fire({
+        title: 'Message Sent!',
+        text: 'Thank you for reaching out. We will get back to you soon.',
+        icon: 'success',
+        confirmButtonColor: 'green'
+      });
+      form.reset(); // Clear form
+    });
+  }
+
+  // Adopt Button Confirmation
+  const adoptButtons = document.querySelectorAll(".btn");
+  adoptButtons.forEach(button => {
+    if (button.textContent.includes("Adopt")) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        Swal.fire({
+          title: 'Adoption Request Sent!',
+          text: 'We are thrilled you want to adopt! We\'ll contact you soon 🐾',
+          icon: 'success',
+          confirmButtonColor: 'green'
+        });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

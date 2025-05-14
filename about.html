@@ -1,0 +1,63 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Gold Paw Adoption</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header>
+  <div class="logo">Animal Adoption</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="about.html"class="active">About Us</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="about">
+    <section class="about-section">
+      <h2>About Gold Paw Adoption</h2>
+      <p>
+        Gold Paw Adoption is dedicated to helping stray and abandoned animals find a warm and loving home. Founded by passionate animal lovers, we aim to connect kind-hearted individuals with adorable pets looking for a family. 💖
+      </p>
+      <p>
+        Our mission is simple: Rescue. Rehabilitate. Rehome. Whether you're looking for a playful puppy or a cuddly kitten, we believe every animal deserves a second chance at happiness.
+      </p>
+      <p>
+        With our user-friendly website, you can browse adoptable pets, learn about pet care, and start your adoption journey from the comfort of your home.
+      </p>
+    </section>
+
+    <section class="why-us">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✔️ Trusted and licensed animal shelter</li>
+        <li>✔️ Friendly and expert staff</li>
+        <li>✔️ Free wellness checks for all adopted animals</li>
+        <li>✔️ Transparent adoption process</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gold Paw Adoption. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight active nav
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      if (link.href.includes("about.html")) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+</body>
+</html>
