@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f0;
+  color: #222;
+}
+
+/* Header and Navigation */
+header {
+  background-color: green;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: hotpink;
+  border-bottom: 2px solid hotpink;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, green, pink);
+  color: black;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+  background-color: rgb(7, 31, 15);
+  color: green;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: hotpink;
+  color: white;
+}
+
+/* Adoption Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 20px;
+  padding: 40px;
+}
+
+
+.card {
+  /*background: rgb(34, 26, 26);*/
+  background: #e1e9ee;
+  border: 2px solid pink;
+  padding: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact Form */
+form {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  border: 2px solid green;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: green;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+form {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  border: 2px solid green;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* spacing between inputs */
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
